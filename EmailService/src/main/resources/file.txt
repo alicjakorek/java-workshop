@@ -1,0 +1,83 @@
+Cześć,
+
+Kolejna porcja zadań. Po niżej znajduje się lista trzech zadań
+(każde kolejne jest trudniejsze i wymaga waszej samodzielnej pracy, na spotkaniu je omówimy):
+
+Maven:
+
+G - com.twoja.domena
+A - emial-app
+V - domyslna
+
+1. Stworzyć aplikację do wysyłania mejli. Aplikacja zawiera trzy rodzaje emaili:
+- WelcomeEmail
+- ConfirmEmail
+- GenericEmail
+
+Każdy email zawiera:
+- tytuł (title) - String
+- treść (content) - String
+- metodę sendEmail() - do wysyłania emaili - typ void (nic nie zwraca)
+ (w tej metodzie powinien być wyświetlony i zwrócony
+ odpowiedni napis, przykładowo dla WelcomeEmail "Welcome email")
+
+System.out.println("Welcome email");
+
+HINT: skrót sout + tab
+
+Klasa ConfirmEmail zawiera dodatkowo pole password (string).
+
+Aby wysłać email w naszej aplikacji potrzebujemy stworzyć klasę SMTPServer
+odpowiedzialną za wysyłanie emaili.
+
+SomeClassName - konwencja
+someMethodName - konwencja
+
+Refromat kodu -> ctrl + alt + l
+Dodanie importu -> alt + enter (lista)
+
+rename -> shift + f6
+
+lista.add(email)
+lista.forEach(email->email.sendEmail())
+
+GenericEmails list
+
+
+SMTPServer:
+                - zawiera listę mejli dla każdego typu
+                 (np private List<GenericEmail> genericEmails)
+                - może  dodawać/usuwać mejle z listy
+                 (public void addEmail(GenericEmail emailToAdd),
+                  public void removeEmail(GenericEmail emailToRemove))
+                - może wysyłać wszystkie mejle z listy
+                (sendAllEmails())
+
+Runner:
+
+Wymagania:
+                - projekt Maven
+                - testy(Junit lub Spock) dla metod sendEmail
+                czy zwracają odpowiedni napis
+
+2. Dodać nowy rodzaj emaila InfoEmail.
+
+Zastosować bibliotekę Lombok do wygenerowania getterów oraz konstruktorów.
+
+3. Zastosować elementy paradygmatu programowania obiektowego
+ (w tej aplikacji z zadania 1-2):
+                - Abstrakcja
+                - Hermetyzacja
+                - Polimorfizm
+                - Dziedziczenie
+
+MojaKlasaSpec extedns Spec
+
+given:
+
+when:
+
+then:
+
+
+Ponownie, wrzucajcie rozwiązania na GitHuba i podsyłajcie linki.
